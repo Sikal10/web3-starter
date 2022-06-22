@@ -1,0 +1,8 @@
+{
+  "name": "web3_starter",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "web3": "^1.7.4"
+  }
+}
