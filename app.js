@@ -14,4 +14,16 @@ const transactionProcess = {
     value: web3.utils.toWei("1", "ether")
 }
 
-web3.eth.sendTransaction(transactionProcess);
+/** ES6 async-await */
+const transferMoney = async () => {
+    try {
+        const {transactionHash} = await web3.eth.sendTransaction(transactionProcess);
+        console.log(transactionHash);
+    } catch (err) {
+        console.log(err)
+    }
+}
+
+await transferMoney();
+
+web3.eth.sendTransaction(transactionProcess, (err, result) => console.log(result));
